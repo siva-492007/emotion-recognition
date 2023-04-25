@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: #6990F2;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Upload.js */
+.container, .result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container form {
+  width: 400px;
+  max-width: 90vw;
+  background-color: #fff;
+  border-radius: 0.45rem;
+  padding: 1rem;
+}
+
+.container form h2 {
+  color: #6990F2;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.container form label {
+  margin: 1rem 0;
+  width: 100%;
+  height: 7rem;
+  border: 2px dashed #6990F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container form span {
+  color: #6990F2;
+}
+
+.container form svg {
+  font-size: 2rem;
+}
+
+.container form .file-holder {
+  margin: 1rem 0;
+  min-height: 2rem;
+  background-color: rgba(105, 144, 242, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.container form .file-holder span {
+  font-size: 0.9rem;
+}
+
+.container form .file-holder svg {
+  color: #6990F2;
+  font-size: 1.2rem;
+  margin-right: 0.4rem;
+}
+
+.container form .file-holder:hover {
+  background-color: rgba(105, 144, 242, 0.2);
+}
+
+.container form button {
+  border: 0;
+  outline: 0;
+  padding: 0.45rem;
+  width: 100%;
+  background-color: #6990F2;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.975rem;
+}
+
+.container form button.disable {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.container form .error-handler {
+  background-color: rgba(220, 20, 60, 0.1);
+  color: rgb(220, 20, 60);
+  margin: 1rem 0;
+  min-height: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* Result.js */
+.result {
+  max-width: 90vw;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  z-index: 1;
+}
+
+.result-btn {
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #6990F2;
+  border-bottom: 1px solid #6990F2;
+  cursor: pointer;
+}
+
+.result-container.opac {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.generate-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  max-width: 95vw;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 2;
+
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.generate-container h2 {
+  color: #6990F2;
+}
+
+.generate-container form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.generate-container .form-group {
+  margin-bottom: 0.75rem;
+}
+
+.generate-container form input,
+.generate-container form select {
+  width: 100%;
+  outline: 0;
+  font-size: 0.8rem;
+  padding: 0.45rem;
+}
+
+.generate-container form button {
+  width: 100%;
+  color: #fff;
+  background-color: #6990F2;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  font-size: 0.975rem;
+  border-radius: 0.4rem;
+}
+
+.download-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.download-container .dbtn {
+  outline: 0;
+  border: 0;
+  padding: 0.4rem 1rem;
+  color: #6990F2;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  margin: 2rem 0;
+}
+
+.download-container p {
+  color: #fff;
+}
+
+.download-container .cbtn {
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #000;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+@media screen  and (max-width: 500px) {
+  
+}
