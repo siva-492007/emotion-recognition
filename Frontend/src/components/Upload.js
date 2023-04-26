@@ -57,7 +57,7 @@ const Upload = ({setPrediction}) => {
     }
     setLoading(true);
 
-    const url = "http://127.0.0.1:9090/user/predict";
+    const url = "http://emotion-recgonition-alb-442293455.us-west-1.elb.amazonaws.com/user/predict";
     
     try {
       const response = await axios.post(url, { data: {...data[0]} });

@@ -6,14 +6,16 @@ import pandas as pd
 import numpy as np
 
 app = Flask("Emotion_Recognition")
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 loaded_model = tf.keras.models.load_model('model.h5')
 
 @app.route("/greet", methods=["GET"])
 def greeting():
     print("Called")
-    return jsonify({ "message": "Hello there, - from Team" })
+    response = jsonify({ "message": "Hello there, - from Team" })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 
@@ -39,8 +41,11 @@ def user():
 
     percentage = round(pred[0][ind]*100, 2)
 
-    return jsonify({ "prediction": emotions[ind], 'percentage': percentage})
+    response = jsonify({ "prediction": emotions[ind], 'percentage': percentage})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
     
 
-
-app.run(port=9090)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=9090)
